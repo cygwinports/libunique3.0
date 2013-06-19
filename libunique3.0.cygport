@@ -1,0 +1,22 @@
+ORIG_PN="libunique"
+inherit gnome2
+
+NAME="libunique3.0"
+VERSION=3.0.2
+RELEASE=1
+CATEGORY="GNOME"
+SUMMARY="GTK+ single-instance application library"
+DESCRIPTION="Unique is a library for writing single instance application. If
+you launch a single instance application twice, the second instance will either
+just quit or will send a message to the running instance. Unique makes it easy
+to write this kind of applications, by providing a base class, taking care of
+all the IPC machinery needed to send messages to a running instance, and also
+handling the startup notification side."
+HOMEPAGE="http://live.gnome.org/LibUnique"
+
+PATCH_URI="1.1.6-compile.patch"
+
+PKG_NAMES="${NAME}_0 ${NAME}-devel girepository-Unique3.0"
+libunique3_0_0_CONTENTS="usr/bin/cygunique-3.0-0.dll usr/share/doc/"
+libunique3_0_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
+girepository_Unique3_0_CONTENTS="usr/*/gir*/Unique-3.0.*"
